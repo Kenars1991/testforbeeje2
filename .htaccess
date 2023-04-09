@@ -1,0 +1,5 @@
+php_value error_reporting 7
+RewriteEngine on
+RewriteBase /
+RewriteRule ^ajax/smeta/([0-9]+)$ ajax.php?mod=smeta&f=look&id=$1 [L,QSA]
+
