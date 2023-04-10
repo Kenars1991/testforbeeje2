@@ -11,7 +11,7 @@ if (!defined("PROMOVERUM_WEB")) {
 ?>
 <link href="/vendors/base/sweetalert2.min.css" rel="stylesheet">
 <script src="/vendors/base/rightsweetalert2.js"></script>
-<script src="/admin/moduls/index/js/js_fil2.php"></script>
+<script src="/moduls/index/js/js_fil2.php"></script>
           <div class="row">
             <div class="col-md-12 grid-margin stretch-card">
               <div class="card">

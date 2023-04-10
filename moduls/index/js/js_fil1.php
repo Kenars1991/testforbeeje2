@@ -1,13 +1,20 @@
 (function($) {
 "use strict"
+var gl_sort = ''
+var gl_tip = ''
 function paginate(pg,sort='',tip='')
 {
+	if(sort != '' && tip != '')
+	{
+	gl_sort = sort
+	gl_tip = tip
+	}
 $.get( "ajax.php?mod=index&f=get_acts&tip=paginator&pg="+pg, '', function( data ) {
 var tmp_val = JSON.parse(data)
 var start = tmp_val.start
 var num = tmp_val.num
 var paginator = tmp_val.paginator
-$.get( "ajax.php?mod=index&f=get_acts&tip=get_tasks&start="+start+'&num='+num+'&sort='+sort+'&srttp='+tip, '', function( data2 ) {
+$.get( "ajax.php?mod=index&f=get_acts&tip=get_tasks&start="+start+'&num='+num+'&sort='+gl_sort+'&srttp='+gl_tip, '', function( data2 ) {
 var tabl_st = ''
 var tmp_val = JSON.parse(data2)	
 for(let i=0; i<tmp_val.length; i++)
